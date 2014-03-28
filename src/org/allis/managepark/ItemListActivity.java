@@ -2,7 +2,7 @@ package org.allis.managepark;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.app.Activity;
 
 /**
  * An activity representing a list of Items. This activity has different
@@ -19,7 +19,7 @@ import android.support.v4.app.FragmentActivity;
  * This activity also implements the required {@link ItemListFragment.Callbacks}
  * interface to listen for item selections.
  */
-public class ItemListActivity extends FragmentActivity implements
+public class ItemListActivity extends Activity implements
 		ItemListFragment.Callbacks {
 
 	/**
@@ -42,7 +42,7 @@ public class ItemListActivity extends FragmentActivity implements
 
 			// In two-pane mode, list items should be given the
 			// 'activated' state when touched.
-			((ItemListFragment) getSupportFragmentManager().findFragmentById(
+			((ItemListFragment) getFragmentManager().findFragmentById(
 					R.id.item_list)).setActivateOnItemClick(true);
 		}
 
@@ -63,7 +63,7 @@ public class ItemListActivity extends FragmentActivity implements
 			arguments.putString(ItemDetailFragment.ARG_ITEM_ID, id);
 			ItemDetailFragment fragment = new ItemDetailFragment();
 			fragment.setArguments(arguments);
-			getSupportFragmentManager().beginTransaction()
+			getFragmentManager().beginTransaction()
 					.replace(R.id.item_detail_container, fragment).commit();
 
 		} else {
