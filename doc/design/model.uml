@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_mYlJMLvbEeOsr74zGLvQew" name="model">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_2BHkULvbEeOsr74zGLvQew" clientDependency="_BgJzcLvcEeOsr74zGLvQew _CvVjYLvcEeOsr74zGLvQew _D8_-cLveEeOsr74zGLvQew _J9ln4LveEeOsr74zGLvQew _KbdIQLvhEeOsr74zGLvQew _Jt1cMLwAEeOW0KGknuBtpw _LcL0YLwAEeOW0KGknuBtpw _theBMLwMEeOPWbUlsX09Cw _AclVcLwPEeOPWbUlsX09Cw" name="Park Manager"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_4Y_aoLvbEeOsr74zGLvQew" name="Add a thing" subject="_2Iug0LveEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_4u3kALvbEeOsr74zGLvQew" name="Remove a thing" subject="_2Iug0LveEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_5B50wLvbEeOsr74zGLvQew" name="Handle Folders"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_BgJzcLvcEeOsr74zGLvQew" name="Usage1" client="_2BHkULvbEeOsr74zGLvQew" supplier="_4Y_aoLvbEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_CvVjYLvcEeOsr74zGLvQew" name="Usage2" client="_2BHkULvbEeOsr74zGLvQew" supplier="_4u3kALvbEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_IDuOILvcEeOsr74zGLvQew" name="Create a folder"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_KKkl4LvcEeOsr74zGLvQew" name="Move to/from Trash"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_D8_-cLveEeOsr74zGLvQew" name="Usage3" client="_2BHkULvbEeOsr74zGLvQew" supplier="_IDuOILvcEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_J9ln4LveEeOsr74zGLvQew" name="Usage4" client="_2BHkULvbEeOsr74zGLvQew" supplier="_KKkl4LvcEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tfpgQLvgEeOsr74zGLvQew" name="thing_folder_1" visibility="package" memberEnd="_tfpgQbvgEeOsr74zGLvQew _tfo5MLvgEeOsr74zGLvQew">
+    <ownedEnd xmi:id="_tfpgQbvgEeOsr74zGLvQew" name="" type="_2Iug0LveEeOsr74zGLvQew" association="_tfpgQLvgEeOsr74zGLvQew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tfpgQrvgEeOsr74zGLvQew" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tfpgQ7vgEeOsr74zGLvQew" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Ka_1QLvhEeOsr74zGLvQew" name="Remove Folder"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_KbdIQLvhEeOsr74zGLvQew" name="Usage5" client="_2BHkULvbEeOsr74zGLvQew" supplier="_Ka_1QLvhEeOsr74zGLvQew"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SMaGoLviEeOsr74zGLvQew" name="thing_systemFolder_1" memberEnd="_SMaGobviEeOsr74zGLvQew _SMY4gLviEeOsr74zGLvQew" navigableOwnedEnd="_SMaGobviEeOsr74zGLvQew">
+    <ownedEnd xmi:id="_SMaGobviEeOsr74zGLvQew" name="things" type="_2Iug0LveEeOsr74zGLvQew" aggregation="shared" association="_SMaGoLviEeOsr74zGLvQew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SMaGorviEeOsr74zGLvQew"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SMaGo7viEeOsr74zGLvQew" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_SMY4gLviEeOsr74zGLvQew" name="systemFolder" type="_90LesLvgEeOsr74zGLvQew" association="_SMaGoLviEeOsr74zGLvQew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SMY4gbviEeOsr74zGLvQew" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SMY4grviEeOsr74zGLvQew" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uoLGMLvuEeOW0KGknuBtpw" clientDependency="_6KozELwKEeOPWbUlsX09Cw _ALrR0LvyEeOW0KGknuBtpw" name="org.allis.parkmanager">
+    <packageImport xmi:id="_3G1UkLvuEeOW0KGknuBtpw" importedPackage="_pjlK8LvuEeOW0KGknuBtpw"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pjlK8LvuEeOW0KGknuBtpw" name="model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_2Iug0LveEeOsr74zGLvQew" name="Thing" useCase="_4Y_aoLvbEeOsr74zGLvQew _4u3kALvbEeOsr74zGLvQew">
+        <ownedAttribute xmi:id="_ic6h4Lv8EeOW0KGknuBtpw" name="name" visibility="private" type="_64IzQLv_EeOW0KGknuBtpw"/>
+        <ownedAttribute xmi:id="_tfo5MLvgEeOsr74zGLvQew" name="collection" type="_8Ab7ELveEeOsr74zGLvQew" aggregation="shared" association="_tfpgQLvgEeOsr74zGLvQew">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tfo5MbvgEeOsr74zGLvQew" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tfo5MrvgEeOsr74zGLvQew" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_X73xwLwMEeOPWbUlsX09Cw" name="moveToSystemFolder"/>
+        <ownedOperation xmi:id="_a39IYLwMEeOPWbUlsX09Cw" name="restoreToCollection"/>
+        <ownedOperation xmi:id="_K_PfELwTEeOqCtqol2P3XQ" name="rent"/>
+        <ownedOperation xmi:id="_MqVu8LwTEeOqCtqol2P3XQ" name="delete"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8Ab7ELveEeOsr74zGLvQew" name="Collection">
+        <generalization xmi:id="_P6WZ4LvhEeOsr74zGLvQew" general="_90LesLvgEeOsr74zGLvQew"/>
+        <ownedOperation xmi:id="_z_3oALwMEeOPWbUlsX09Cw" name="addThing"/>
+        <ownedOperation xmi:id="_3bRX4LwMEeOPWbUlsX09Cw" name="removeThing"/>
+        <ownedOperation xmi:id="_DZfOoLwTEeOqCtqol2P3XQ" name="getThings"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_90LesLvgEeOsr74zGLvQew" name="Folder">
+        <generalization xmi:id="_C63rsLvhEeOsr74zGLvQew" general="_8Ab7ELveEeOsr74zGLvQew"/>
+        <ownedAttribute xmi:id="_4rFNMLv8EeOW0KGknuBtpw" name="name" visibility="protected" type="_64IzQLv_EeOW0KGknuBtpw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_45nYcLv8EeOW0KGknuBtpw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_45pNoLv8EeOW0KGknuBtpw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_45rC0Lv8EeOW0KGknuBtpw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_dsvkMLwMEeOPWbUlsX09Cw" name="getName"/>
+        <ownedOperation xmi:id="_exPuILwMEeOPWbUlsX09Cw" name="setName"/>
+        <ownedOperation xmi:id="_Vz7tgLwPEeOPWbUlsX09Cw" name="getThings"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_SsWAYLvhEeOsr74zGLvQew" name="RentFolder">
+        <generalization xmi:id="_ea_Y0LvhEeOsr74zGLvQew" general="_90LesLvgEeOsr74zGLvQew"/>
+        <ownedOperation xmi:id="_PORrULwTEeOqCtqol2P3XQ" name="returnThing"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WVcOALvhEeOsr74zGLvQew" name="Trash">
+        <generalization xmi:id="_WV6vILvhEeOsr74zGLvQew" general="_90LesLvgEeOsr74zGLvQew"/>
+        <ownedOperation xmi:id="_iVkwgLwMEeOPWbUlsX09Cw" name="clear"/>
+        <ownedOperation xmi:id="_JFr8cLwTEeOqCtqol2P3XQ" name="restoreThing"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8LDgwLwMEeOPWbUlsX09Cw" name="FolderManager">
+        <ownedAttribute xmi:id="_BiLWcLwNEeOPWbUlsX09Cw" name="rentFolder" type="_SsWAYLvhEeOsr74zGLvQew" association="_BiL9gLwNEeOPWbUlsX09Cw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BiLWcbwNEeOPWbUlsX09Cw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BiLWcrwNEeOPWbUlsX09Cw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_C8IzALwNEeOPWbUlsX09Cw" name="trashFolder" type="_WVcOALvhEeOsr74zGLvQew" association="_C8JaELwNEeOPWbUlsX09Cw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C8IzAbwNEeOPWbUlsX09Cw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C8IzArwNEeOPWbUlsX09Cw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_D1mKkLwNEeOPWbUlsX09Cw" name="folder" type="_8Ab7ELveEeOsr74zGLvQew" aggregation="composite" association="_D1mxoLwNEeOPWbUlsX09Cw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D1mKkbwNEeOPWbUlsX09Cw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D1mKkrwNEeOPWbUlsX09Cw" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_adSJILwNEeOPWbUlsX09Cw" name="backup"/>
+        <ownedOperation xmi:id="_c53gULwNEeOPWbUlsX09Cw" name="restore"/>
+        <ownedOperation xmi:id="_uEyUMLwNEeOPWbUlsX09Cw" name="createFolder"/>
+        <ownedOperation xmi:id="_O3hxgLwOEeOPWbUlsX09Cw" name="removeFolder"/>
+        <ownedOperation xmi:id="_TYRY0LwOEeOPWbUlsX09Cw" name="getFolders"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_BiL9gLwNEeOPWbUlsX09Cw" name="folderManager_rentFolder_1" memberEnd="_BiL9gbwNEeOPWbUlsX09Cw _BiLWcLwNEeOPWbUlsX09Cw">
+        <ownedEnd xmi:id="_BiL9gbwNEeOPWbUlsX09Cw" name="folderManager" type="_8LDgwLwMEeOPWbUlsX09Cw" association="_BiL9gLwNEeOPWbUlsX09Cw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BiL9grwNEeOPWbUlsX09Cw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BiL9g7wNEeOPWbUlsX09Cw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_C8JaELwNEeOPWbUlsX09Cw" name="folderManager_trashFolder_1" memberEnd="_C8JaEbwNEeOPWbUlsX09Cw _C8IzALwNEeOPWbUlsX09Cw">
+        <ownedEnd xmi:id="_C8JaEbwNEeOPWbUlsX09Cw" name="folderManager" type="_8LDgwLwMEeOPWbUlsX09Cw" association="_C8JaELwNEeOPWbUlsX09Cw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C8JaErwNEeOPWbUlsX09Cw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C8JaE7wNEeOPWbUlsX09Cw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_D1mxoLwNEeOPWbUlsX09Cw" name="folderManager_folder_1" memberEnd="_D1mxobwNEeOPWbUlsX09Cw _D1mKkLwNEeOPWbUlsX09Cw">
+        <ownedEnd xmi:id="_D1mxobwNEeOPWbUlsX09Cw" name="folderManager" type="_8LDgwLwMEeOPWbUlsX09Cw" association="_D1mxoLwNEeOPWbUlsX09Cw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D1mxorwNEeOPWbUlsX09Cw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D1mxo7wNEeOPWbUlsX09Cw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6SURwLvxEeOW0KGknuBtpw" clientDependency="_-7BiQLvxEeOW0KGknuBtpw _AR9WoLwLEeOPWbUlsX09Cw" name="view">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_-7BiQLvxEeOW0KGknuBtpw" name="Dependency1" client="_6SURwLvxEeOW0KGknuBtpw" supplier="_7eDFELvxEeOW0KGknuBtpw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6KozELwKEeOPWbUlsX09Cw" name="Dependency2" client="_uoLGMLvuEeOW0KGknuBtpw" supplier="_pjlK8LvuEeOW0KGknuBtpw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_AR9WoLwLEeOPWbUlsX09Cw" name="Dependency3" client="_6SURwLvxEeOW0KGknuBtpw" supplier="_pjlK8LvuEeOW0KGknuBtpw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7eDFELvxEeOW0KGknuBtpw" clientDependency="_EV8JcLwLEeOPWbUlsX09Cw" name="control">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ALrR0LvyEeOW0KGknuBtpw" name="Dependency1" client="_uoLGMLvuEeOW0KGknuBtpw" supplier="_pjlK8LvuEeOW0KGknuBtpw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_GpLnILv6EeOW0KGknuBtpw" name="Controler"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_EV8JcLwLEeOPWbUlsX09Cw" name="Dependency2" client="_7eDFELvxEeOW0KGknuBtpw" supplier="_pjlK8LvuEeOW0KGknuBtpw"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_64IzQLv_EeOW0KGknuBtpw" name="String"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_EpvQMLwAEeOW0KGknuBtpw" name="Save"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_G7i6wLwAEeOW0KGknuBtpw" name="Restore"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_Jt1cMLwAEeOW0KGknuBtpw" name="Usage6" client="_2BHkULvbEeOsr74zGLvQew" supplier="_EpvQMLwAEeOW0KGknuBtpw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_LcL0YLwAEeOW0KGknuBtpw" name="Usage7" client="_2BHkULvbEeOsr74zGLvQew" supplier="_G7i6wLwAEeOW0KGknuBtpw"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rKcfcLwMEeOPWbUlsX09Cw" name="Clear trash folder"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_theBMLwMEeOPWbUlsX09Cw" name="Usage8" client="_2BHkULvbEeOsr74zGLvQew" supplier="_rKcfcLwMEeOPWbUlsX09Cw"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8iqdkLwOEeOPWbUlsX09Cw" name="Rent/return a Thing"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_AclVcLwPEeOPWbUlsX09Cw" name="Usage9" client="_2BHkULvbEeOsr74zGLvQew" supplier="_8iqdkLwOEeOPWbUlsX09Cw"/>
+</uml:Model>
